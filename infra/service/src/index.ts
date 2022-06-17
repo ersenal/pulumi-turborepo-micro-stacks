@@ -1,5 +1,3 @@
-import * as pulumi from "@pulumi/pulumi";
-
-const networking = new pulumi.StackReference("networking");
-const vpcId = networking.requireOutput("vpcId");
+import { getNetworkingOutput } from "infra-networking";
+const vpcId = getNetworkingOutput("vpcId");
 vpcId.apply(console.log);
