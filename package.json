@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "infra/**",
+    "packages/**"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -13,13 +13,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-custom": "latest",
-    "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "^1.2.16"
   },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
+  },
+  "resolutions": {
+    "typescript": "^4.6.2"
   },
   "dependencies": {},
   "packageManager": "yarn@1.22.19"

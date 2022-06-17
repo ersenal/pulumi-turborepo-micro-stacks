@@ -1,0 +1,19 @@
+{
+  "name": "infra-networking",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint \"src/**/*\" \"test/**/*\" --no-error-on-unmatched-pattern && tsc --noEmit",
+    "deploy": "pulumi up --yes -s \"networking\""
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "@pulumi/aws": "^5.4.0",
+    "@pulumi/awsx": "1.0.0-beta.7",
+    "@pulumi/pulumi": "^3.33.1"
+  },
+  "devDependencies": {
+    "node-config": "*"
+  }
+}

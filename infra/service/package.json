@@ -1,0 +1,17 @@
+{
+  "name": "infra-service",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint \"src/**/*\" \"test/**/*\" --no-error-on-unmatched-pattern && tsc --noEmit",
+    "deploy": "pulumi up --yes -s \"service\""
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "infra-networking": "*"
+  },
+  "devDependencies": {
+    "node-config": "*"
+  }
+}
